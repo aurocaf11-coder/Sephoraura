@@ -1,0 +1,85 @@
+<!-- contacts.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sephoraura - Contatti</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sephoraura</h1>
+        <p><em>Fai risplendere la tua bellezza.</em></p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Chi siamo</a></li>
+                <li><a href="products.html">Prodotti</a></li>
+                <li><a href="contacts.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Richiedi Assistenza</h2>
+            <p>Compila il modulo per ricevere informazioni sui tuoi ordini o sui nostri prodotti.</p>
+            
+            <form action="#" method="post">
+                <p>
+                    <label for="nome">Nome e Cognome:</label><br>
+                    <input type="text" id="nome" name="nome" required>
+                </p>
+                <p>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="oggetto">Oggetto della richiesta:</label><br>
+                    <select id="oggetto" name="oggetto">
+                        <option value="assistenza">Assistenza ordini</option>
+                        <option value="informazioni">Informazioni prodotti</option>
+                        <option value="reso">Resi e rimborsi</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="messaggio">Messaggio:</label><br>
+                    <textarea id="messaggio" name="messaggio" rows="5" cols="40" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Invia richiesta</button>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Domande Frequenti (FAQ)</h2>
+            <details>
+                <summary><strong>Quali sono i tempi di spedizione?</strong></summary>
+                <p>Spediamo in tutta Italia in 24-48 ore lavorative.</p>
+            </details>
+            <details>
+                <summary><strong>I prodotti sono adatti alle pelli sensibili?</strong></summary>
+                <p>Sì, tutte le nostre formulazioni sono dermatologicamente testate e delicate.</p>
+            </details>
+            <details>
+                <summary><strong>Come posso applicare lo sconto studenti?</strong></summary>
+                <p>Inserisci il codice STUDENT15 nel carrello prima di completare il pagamento.</p>
+            </details>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Sephoraura S.r.l. - Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
