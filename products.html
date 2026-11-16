@@ -5,74 +5,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephoraura - Prodotti</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #16181f 0%, #242834 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            letter-spacing: 0.04rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo-badge {
+            width: 64px;
+            height: 64px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-content {
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.35rem;
+            margin-bottom: 0.6rem;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        nav {
+            margin-top: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            border-right: 1px solid #ffffff;
+        }
+
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 0.75rem 1.4rem;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.15rem;
+            transition: background-color 0.2s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        main {
+            background-color: rgba(27, 31, 34, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 2.5rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2.major {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25rem;
+            border-bottom: 1px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.8rem;
+        }
+
+        h3.category-title {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        p {
+            margin-bottom: 0.8rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            margin: 2rem 0;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+        }
+
+        article.product-card {
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 4px;
+            padding: 1.4rem;
+            background-color: rgba(255, 255, 255, 0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        article.product-card h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            margin-bottom: 0.6rem;
+            color: #ffffff;
+        }
+
+        .price-tag {
+            margin-top: 0.8rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.12rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Sephoraura</h1>
-        <p><em>Fai risplendere la tua bellezza.</em></p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Chi siamo</a></li>
-                <li><a href="products.html">Prodotti</a></li>
-                <li><a href="contacts.html">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header>
+            <div class="logo-badge">&#9670;</div>
+            <div class="header-content">
+                <h1>Sephoraura</h1>
+                <p><em>Fai risplendere la tua bellezza.</em></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Chi siamo</a></li>
+                    <li><a href="products.html" class="active">Prodotti</a></li>
+                    <li><a href="contacts.html">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <hr>
+        <main>
+            <h2 class="major">Catalogo Prodotti</h2>
 
-    <main>
-        <h2>Catalogo Prodotti</h2>
+            <section>
+                <h3 class="category-title">Skincare</h3>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div>
+                            <h4>AuraGlow Serum</h4>
+                            <p>Siero viso illuminante a base di vitamine ed estratti naturali.</p>
+                        </div>
+                        <p class="price-tag"><strong>Prezzo:</strong> &euro; 14,99</p>
+                    </article>
+                    <article class="product-card">
+                        <div>
+                            <h4>Beauty Kit Starter</h4>
+                            <p>Cofanetto regalo completo con i prodotti essenziali per la skincare quotidiana.</p>
+                        </div>
+                        <p class="price-tag"><strong>Prezzo:</strong> &euro; 24,99</p>
+                    </article>
+                </div>
+            </section>
 
-        <section>
-            <h3>Skincare</h3>
-            <article>
-                <h4>AuraGlow Serum</h4>
-                <p>Siero viso illuminante a base di vitamine ed estratti naturali.</p>
-                <p><strong>Prezzo:</strong> € 14,99</p>
-            </article>
-            <article>
-                <h4>Beauty Kit Starter</h4>
-                <p>Cofanetto regalo completo con i prodotti essenziali per la skincare quotidiana.</p>
-                <p><strong>Prezzo:</strong> € 24,99</p>
-            </article>
-        </section>
+            <hr>
 
-        <hr>
+            <section>
+                <h3 class="category-title">Make-up</h3>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div>
+                            <h4>Palette Sephoraura Eyes</h4>
+                            <p>Palette di ombretti con 12 tonalità sia naturali che brillanti.</p>
+                        </div>
+                        <p class="price-tag"><strong>Prezzo:</strong> &euro; 18,50</p>
+                    </article>
+                    <article class="product-card">
+                        <div>
+                            <h4>Lip Shine Gloss</h4>
+                            <p>Lucidalabbra idratante ad effetto specchio, non appiccicoso.</p>
+                        </div>
+                        <p class="price-tag"><strong>Prezzo:</strong> &euro; 9,99</p>
+                    </article>
+                </div>
+            </section>
 
-        <section>
-            <h3>Make-up</h3>
-            <article>
-                <h4>Palette Sephoraura Eyes</h4>
-                <p>Palette di ombretti con 12 tonalità sia naturali che brillanti.</p>
-                <p><strong>Prezzo:</strong> € 18,50</p>
-            </article>
-            <article>
-                <h4>Lip Shine Gloss</h4>
-                <p>Lucidalabbra idratante ad effetto specchio, non appiccicoso.</p>
-                <p><strong>Prezzo:</strong> € 9,99</p>
-            </article>
-        </section>
+            <hr>
 
-        <hr>
+            <section>
+                <h3 class="category-title">Servizi Digitali</h3>
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div>
+                            <h4>Virtual Match Test</h4>
+                            <p>Servizio online gratuito per trovare la tonalità perfetta di fondotinta direttamente da casa.</p>
+                        </div>
+                        <p class="price-tag"><strong>Prezzo:</strong> Gratuito</p>
+                    </article>
+                </div>
+            </section>
+        </main>
 
-        <section>
-            <h3>Servizi Digitali</h3>
-            <article>
-                <h4>Virtual Match Test</h4>
-                <p>Servizio online gratuito per trovare la tonalità perfetta di fondotinta direttamente da casa.</p>
-                <p><strong>Prezzo:</strong> Gratuito</p>
-            </article>
-        </section>
-    </main>
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 Sephoraura S.r.l. - Tutti i diritti riservati.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Sephoraura S.r.l. - Tutti i diritti riservati.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
