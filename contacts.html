@@ -5,81 +5,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sephoraura - Contatti</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #16181f 0%, #242834 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            letter-spacing: 0.04rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 2.5rem 0;
+            flex: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .logo-badge {
+            width: 64px;
+            height: 64px;
+            border: 1px solid #ffffff;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .header-content {
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 2rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.35rem;
+            margin-bottom: 0.6rem;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        nav {
+            margin-top: 1.8rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            border-right: 1px solid #ffffff;
+        }
+
+        nav ul li:last-child {
+            border-right: none;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 0.75rem 1.4rem;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.15rem;
+            transition: background-color 0.2s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        main {
+            background-color: rgba(27, 31, 34, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 2.5rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        section:last-child {
+            margin-bottom: 0;
+        }
+
+        h2.major {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25rem;
+            border-bottom: 1px solid #ffffff;
+            display: inline-block;
+            padding-bottom: 0.4rem;
+            margin-bottom: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            margin: 2rem 0;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            color: #ffffff;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        select option {
+            background-color: #1b1f22;
+            color: #ffffff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        button.btn-primary {
+            padding: 0.8rem 1.8rem;
+            background-color: #ffffff;
+            color: #1b1f22;
+            border: 1px solid #ffffff;
+            border-radius: 4px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.18rem;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        button.btn-primary:hover {
+            opacity: 0.85;
+        }
+
+        details {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            background-color: rgba(255, 255, 255, 0.04);
+        }
+
+        details summary {
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.1rem;
+        }
+
+        details p {
+            margin-top: 0.8rem;
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Sephoraura</h1>
-        <p><em>Fai risplendere la tua bellezza.</em></p>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Chi siamo</a></li>
-                <li><a href="products.html">Prodotti</a></li>
-                <li><a href="contacts.html">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header>
+            <div class="logo-badge">&#9670;</div>
+            <div class="header-content">
+                <h1>Sephoraura</h1>
+                <p><em>Fai risplendere la tua bellezza.</em></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Chi siamo</a></li>
+                    <li><a href="products.html">Prodotti</a></li>
+                    <li><a href="contacts.html" class="active">Contatti</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <hr>
+        <main>
+            <section>
+                <h2 class="major">Richiedi Assistenza</h2>
+                <p>Compila il modulo per ricevere informazioni sui tuoi ordini o sui nostri prodotti.</p>
 
-    <main>
-        <section>
-            <h2>Richiedi Assistenza</h2>
-            <p>Compila il modulo per ricevere informazioni sui tuoi ordini o sui nostri prodotti.</p>
-            
-            <form action="#" method="post">
-                <p>
-                    <label for="nome">Nome e Cognome:</label><br>
-                    <input type="text" id="nome" name="nome" required>
-                </p>
-                <p>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
-                </p>
-                <p>
-                    <label for="oggetto">Oggetto della richiesta:</label><br>
-                    <select id="oggetto" name="oggetto">
-                        <option value="assistenza">Assistenza ordini</option>
-                        <option value="informazioni">Informazioni prodotti</option>
-                        <option value="reso">Resi e rimborsi</option>
-                        <option value="altro">Altro</option>
-                    </select>
-                </p>
-                <p>
-                    <label for="messaggio">Messaggio:</label><br>
-                    <textarea id="messaggio" name="messaggio" rows="5" cols="40" required></textarea>
-                </p>
-                <p>
-                    <button type="submit">Invia richiesta</button>
-                </p>
-            </form>
-        </section>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome e Cognome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="oggetto">Oggetto della richiesta:</label>
+                        <select id="oggetto" name="oggetto">
+                            <option value="assistenza">Assistenza ordini</option>
+                            <option value="informazioni">Informazioni prodotti</option>
+                            <option value="reso">Resi e rimborsi</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="messaggio">Messaggio:</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Invia richiesta</button>
+                </form>
+            </section>
 
-        <hr>
+            <hr>
 
-        <section>
-            <h2>Domande Frequenti (FAQ)</h2>
-            <details>
-                <summary><strong>Quali sono i tempi di spedizione?</strong></summary>
-                <p>Spediamo in tutta Italia in 24-48 ore lavorative.</p>
-            </details>
-            <details>
-                <summary><strong>I prodotti sono adatti alle pelli sensibili?</strong></summary>
-                <p>Sì, tutte le nostre formulazioni sono dermatologicamente testate e delicate.</p>
-            </details>
-            <details>
-                <summary><strong>Come posso applicare lo sconto studenti?</strong></summary>
-                <p>Inserisci il codice STUDENT15 nel carrello prima di completare il pagamento.</p>
-            </details>
-        </section>
-    </main>
+            <section>
+                <h2 class="major">Domande Frequenti (FAQ)</h2>
+                <details>
+                    <summary><strong>Quali sono i tempi di spedizione?</strong></summary>
+                    <p>Spediamo in tutta Italia in 24-48 ore lavorative.</p>
+                </details>
+                <details>
+                    <summary><strong>I prodotti sono adatti alle pelli sensibili?</strong></summary>
+                    <p>Sì, tutte le nostre formulazioni sono dermatologicamente testate e delicate.</p>
+                </details>
+                <details>
+                    <summary><strong>Come posso applicare lo sconto studenti?</strong></summary>
+                    <p>Inserisci il codice STUDENT15 nel carrello prima di completare il pagamento.</p>
+                </details>
+            </section>
+        </main>
 
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 Sephoraura S.r.l. - Tutti i diritti riservati.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2026 Sephoraura S.r.l. - Tutti i diritti riservati.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
